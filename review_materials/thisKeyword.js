@@ -2,21 +2,21 @@
 
 // Standard usage of 'this'
 
-// 1. Global Object: 'this' is by default binded to the global object
+// 1. Global Object: 'this' is by default bound to the global object
 console.log(this); // logs the windows object
 
-// 2. Free Function Inovcation: 'this' is binded to the global object
+// 2. Free Function Inovcation: 'this' is bound to the global object
 var logThis = function(){console.log(this)};
 logThis() // logs the windows object
 
-// 3A. Call / Apply: 'this' is binded to the first argument
+// 3A. Call / Apply: 'this' is bound to the first argument
 var logThis = function(){console.log(this)};
 var obj = {
   a: true
 }
 logThis.apply(obj);
 
-// 3B: Bind method: 'this' is binded to the first argument
+// 3B: Bind method: 'this' is bound to the first argument
 var logThis = function(){console.log(this)};
 var obj = {
   a: true
@@ -24,7 +24,7 @@ var obj = {
 var binded = logThis.bind(obj);
 binded();
 
-// 4: Method: 'this' is binded to the object
+// 4: Method: 'this' is bound to the object
 var obj2 = {
   log: function(){
     console.log(this);
@@ -32,7 +32,7 @@ var obj2 = {
 };
 obj2.log();
 
-// 5: Using the new keyword: 'this' is binded to Object.create(Class.prototype);
+// 5: Using the new keyword: 'this' is bound to Object.create(Class.prototype);
 var Animal = function(name,age,height){
   this.name = name;
   this.age = age;
