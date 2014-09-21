@@ -20,5 +20,4 @@
   */
 
   var uniq = function(array) {
-
   };
